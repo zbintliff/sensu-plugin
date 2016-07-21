@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.add_dependency('json',       '<= 2.0.0')
   s.add_dependency('mixlib-cli', '>= 1.5.0')
 
-  s.add_development_dependency('rake')
-  s.add_development_dependency('minitest')
+  s.add_development_dependency 'rubocop',                   '~> 0.40.0'
+  s.add_development_dependency 'rspec',                     '~> 3.4'
+  s.add_development_dependency 'rake',                      '~> 10.5'
+  s.add_development_dependency 'yard',                      '~> 0.8'
 end

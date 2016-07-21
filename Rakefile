@@ -1,9 +1,13 @@
-
+require 'rubocop/rake_task'
 require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
+
+RuboCop::RakeTask.new
+
+RSpec::Core::RakeTask.new(:spec) do |r|
+  r.pattern = FileList['**/**/*_spec.rb']
 end
 
-task :default => 'test'
+args = [:spec, :rubocop]
+task default: args

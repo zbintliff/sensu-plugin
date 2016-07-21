@@ -224,7 +224,5 @@ module Sensu
         end
       end
     end
-
   end
-
 end
